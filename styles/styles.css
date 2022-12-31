@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@500&display=swap');
 
+/* everything */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -43,6 +45,8 @@ p {
     font-size: 1.5em;
 }
 
+/* nav and footer section */
+
 nav, footer {
     display: flex;
     justify-content: space-between;
@@ -84,6 +88,8 @@ nav ul a:hover::before, footer ul a:hover::before {
     margin-bottom: 1em;
 }
 
+/* hero section */
+
 .hero {
     background-color: #5100B9;
     color: #FFFFFF;
@@ -108,6 +114,8 @@ section {
     padding: 4em 2em;
 }
 
+/* about section */
+
 .about h1 {
     margin: 1em 0em;
 }
@@ -115,6 +123,8 @@ section {
 .about img[src="images/portrait.png"] {
     border-radius: 15px;
 }
+
+/* skills section */
 
 .skills {
     background-color: #5100B9;
@@ -154,6 +164,8 @@ section {
     padding: 0.25em 2em;
 }
 
+/* projects section */
+
 .project h2, .project p {
     margin-top: 1.5em;
 }
@@ -162,7 +174,7 @@ section {
     margin-bottom: 3em;
 }
 
-.project .content a {
+.project .content a:not(.intext-link) {
     margin: 1.5em 0em;
     background-color: #5100B9;
     border: none;
@@ -173,8 +185,26 @@ section {
     transition: background-color 0.3s ease;
 }
 
-.project .content a:hover {
+
+.project .content a:not(.intext-link):hover {
     background-color: #7000FF;
+}
+
+.project .content .intext-link {
+    text-decoration: underline;
+}
+
+.project .content .intext-link::before {
+    text-decoration: underline;
+    position: absolute;
+    content: attr(data-content);
+    color: #00F0FF;
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+    transition: clip-path 0.5s ease;
+}
+
+.project .content .intext-link:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .project .github {
