@@ -3,6 +3,8 @@
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
+    line-height: 150%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,29 +26,34 @@ img {
     width: 100%;
 }
 
-p, button {
+p, .project .content a {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #5100B9;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.5em;
 }
 
 nav, footer {
     display: flex;
     justify-content: space-between;
-    padding: 2em;
+    padding: 2.5em;
     background-color: #7000FF;
 }
 
 nav .logo, footer .logo {
     color: #00F0FF;
     font-weight: bold;
+    font-size: 1.75em;
 }
 
 nav ul, footer ul {
@@ -57,6 +64,19 @@ nav ul a, footer ul a {
     display: block;
     padding: 0em 1em;
     color: #FFFFFF;
+    font-size: 1.5em;
+}
+
+nav ul a::before, footer ul a::before {
+    position: absolute;
+    content: attr(data-content);
+    color: #00F0FF;
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+    transition: clip-path 0.5s ease;
+}
+
+nav ul a:hover::before, footer ul a:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .footer-text {
@@ -86,11 +106,14 @@ span.blue {
 
 section {
     padding: 4em 2em;
-
 }
 
 .about h1 {
     margin: 1em 0em;
+}
+
+.about img[src="images/portrait.png"] {
+    border-radius: 15px;
 }
 
 .skills {
@@ -101,10 +124,16 @@ section {
     margin-bottom: 1em;
 }
 
+.skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 2em;
+    justify-content: center;
+}
+
 .skill {
     background-color: #FFFFFF;
     border-radius: 1em;
-    margin-bottom: 1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -112,7 +141,7 @@ section {
 }
 
 .skill img {
-    height: 100px;
+    height: 120px;
     margin: 1em 0;
 }
 
@@ -129,26 +158,147 @@ section {
     margin-top: 1.5em;
 }
 
-button {
-    margin: 4em 0em;
+.project p {
+    margin-bottom: 3em;
+}
+
+.project .content a {
+    margin: 1.5em 0em;
     background-color: #5100B9;
     border: none;
     color: #00F0FF;
     border-radius: 15px;
-    padding: 0.25em 3em;
+    padding: 0.1em 3em;
+    font-size: 1.25em;
+    transition: background-color 0.3s ease;
+}
+
+.project .content a:hover {
+    background-color: #7000FF;
+}
+
+.project .github {
+    display: flex;
 }
 
 img[src='images/github.svg'] {
-    width: 1.5em;
-    position: relative;
-    top: 0.4em;
+    width: 2.5em;
 }
 
-@media all and (min-width: 700px) {
- 
-    
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+@media all and (min-width: 750px) {
+
+    /* nav and footer section */
+
+    nav a, footer a {
+        margin: 0rem 1.5rem;
+        font-size: large;
+    }
+
+    .footer-text {
+        margin-top: 10em;
+    }
+
+    /* hero section */
+
+    .hero {
+        height: 95vh;
+        background-color: #FFFFFF;
+        position: relative;
+        z-index: -2;
+    }
+
+    .hero .content {
+        margin-left: 3rem;
+        margin-top: 2em;
+        width: 70%;
+    }
+
+    .hero .rect {
+        width: 76%;
+        height: 100%;
+        background-color: #5100B9;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    .hero img {
+        display: block;
+        width: 37vw;
+        position: absolute;
+        right: 0;
+        top: 8em;
+    }
+
+    .hero .circle {
+        width: 34vw;
+        height: 34vw;
+        background-color: #D9D9D9;
+        border-radius: 50%;
+        position: absolute;
+        top: 8em;
+        right: 1em;
+        z-index: -2;
+    }
+
+    /* about section */
+
+    .about {
+        display: grid;
+        grid-template-columns: 68% 32%;
+        position: relative;
+    }
+
+    .about .left {
+        margin: 0em 3rem;
+    }
+
+    .about .rect {
+        background-color: #5100B9;
+        width: 24%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    /* skills section */
+
+    .skills h1 {
+        margin-left: 3rem;
+    }
 
     /* project section */
+
+    .projects h1 {
+        margin-left: 3rem;
+    }
+
+    .project .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .right .content {
+        align-items: flex-end;
+    }
+
+    .right .github {
+        flex-direction: row-reverse;
+    }
 
     .project {
         position: relative;
@@ -156,6 +306,10 @@ img[src='images/github.svg'] {
         grid-template-columns: 55% 45%;
         margin-top: 17.5em;
         z-index: 5;
+    }
+
+    .project .content {
+        margin: 0em 3em;
     }
 
     .project:first-of-type {
@@ -175,33 +329,38 @@ img[src='images/github.svg'] {
 
     .right > img {
         order: -1;
-        /* width: 75% */
     }
 
-
-    .project > img[src='images/console-chess.png'] {
+    .project:first-of-type > img {
         position: relative;
-        top: 50%;
+        top: 65%;
+    }
+
+    .project:nth-of-type(6) {
+        grid-template-columns: 40% 60%;
     }
 
     .project:nth-of-type(6) .content {
         order: 3;
     }
 
-    .project:nth-of-type(6) img:nth-of-type(1) {
+    .project:nth-of-type(6) > img:nth-of-type(1) {
         order: 2;
         align-self: end;
-        justify-self: end;
+        justify-self: center;
         margin-right: 1em;
+        width: 64%;
     }
 
     .project:nth-of-type(6) img:nth-of-type(2) {
         order: 4;
         justify-self: end;
+        width: 70%;
     }
 
     .project:nth-of-type(6) img:nth-of-type(3) {
         order: 5;
+        width: 53%;
     }
 
     .project:nth-of-type(6) .rect-and-circle {
@@ -209,9 +368,12 @@ img[src='images/github.svg'] {
     }
 
     .project:nth-of-type(6) img:nth-of-type(2), .project:nth-of-type(6) img:nth-of-type(3) {
-        width: 70%;
         position: relative;
         right: 6em;
+    }
+
+    .project:nth-of-type(6) > img {
+        bottom: 10em;
     }
 
     .project img {
@@ -276,7 +438,20 @@ img[src='images/github.svg'] {
 
 }
 
+@media all and (min-width: 1120px) {
+    
+    nav ul a, footer ul a {
+        font-size: 2em;
+    }
+
+    nav .logo, footer .logo {
+        font-size: 2.25em;
+    }
+
+}
+
 @media all and (min-width: 1200px) {
+
 
     .project:nth-of-type(2) {
         margin-top: 30em;
