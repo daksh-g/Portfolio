@@ -11,6 +11,7 @@ body {
     height: 100vh;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
     color: #5100B9;
+    overflow-x: hidden
 }
 
 section {
@@ -410,10 +411,15 @@ img[src='images/github.svg'] {
     }
 
     .rect-and-circle {
-        background-color: #5100B9;
         width: 24vw;
         height: 56vw;
         position: absolute;
+    }
+
+    .rect-and-circle .rect {
+        background-color: #5100B9;
+        width: 100%;
+        height: 100%;
     }
 
     .left .rect-and-circle {
@@ -430,7 +436,7 @@ img[src='images/github.svg'] {
         top: -5em;
     }
 
-    .rect-and-circle::before {
+    .rect-and-circle .circle {
         content: '';
         display: block;
         width: 34vw;
@@ -441,12 +447,12 @@ img[src='images/github.svg'] {
         z-index: -5;
     }
 
-    .left .rect-and-circle::before {
+    .left .rect-and-circle .circle {
         right: 8vw;
         top: -17vw;
     }
 
-    .right .rect-and-circle::before {
+    .right .rect-and-circle .circle {
         left: 8vw;
         top: -17vw;
     }
