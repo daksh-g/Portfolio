@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Daksh Gupta">
-    <meta name="description" content="Portfolio">
+    <meta name="description" content="Website/Portfolio of Daksh Gupta, an active and aspiring student developer who enjoys coding games and projects.">
+    <meta name="description" content="Website/Portfolio of Daksh Gupta, an active and aspiring student developer who enjoys coding games and projects.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +16,8 @@
 
     <title>Daksh Gupta</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" defer></script>
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
@@ -44,9 +45,9 @@
         <div class="left transition1">
             <h1>About Me</h1>
             <p>
-                I’m Daksh, a passionate student developer from Bellevue, Washington. I’m currently a sophomore at Interlake High School. <br><br>
+                I’m Daksh, a passionate student developer from Bellevue, Washington. I’m currently a junior at Interlake High School. <br><br>
                 In the realm of coding, I have mostly spent my time in competitive programming, generally on competing in USACO, Codeforces, Leetcode, and others of the like. <br><br>
-                I have built this website to get back into coding projects and games, and to showcase what I have already made. <br><br>
+                I built this website in 2022 to get back into coding projects and games, and to showcase what I have already made. <br><br>
                 Outside of programming, I spend my time biking and playing tennis. I have a particular love for math, and do math competitions as well.<br><br>
             </p>
         </div>
@@ -57,18 +58,33 @@
     <section class="skills" id="skills">
         <h1 class="transition1"><span class="blue">My Skills</span></h1>
         <ul>
+            <!-- add skill of node.js and figma below, using images/svg files as images-->
+            <li class="skill transition1">
+                <img src="images/nodejs.svg" alt="node.js icon">
+                <p>Node.js</p>
+                <div class="skill-level">
+                    <p>Beginner</p>
+                </div>
+            </li>
+            <li class="skill transition1">
+                <img src="images/figma.svg" alt="figma icon">
+                <p>Figma</p>
+                <div class="skill-level">
+                    <p>Beginner</p>
+                </div>
+            </li>
             <li class="skill transition1">
                 <img src="images/html.svg" alt="html icon">
                 <p>HTML</p>
                 <div class="skill-level">
-                    <p>Beginner</p>
+                    <p>Intermediate</p>
                 </div>
             </li>
             <li class="skill transition1">
                 <img src="images/css.svg" alt="css icon">
                 <p>CSS</p>
                 <div class="skill-level">
-                    <p>Beginner</p>
+                    <p>Intermediate</p>
                 </div>
             </li>
             <li class="skill transition1">
@@ -118,7 +134,7 @@
 
     <section class="projects" id="projects">
         <h1 id="projects" class="transition1">My Projects</h1>
-        <div class="project left">
+        <div class="project left chess">
             <div class="content">
                 <h2 class="transition2">Console Chess</h2>
                 <p class="transition2">In one of my first coding projects, I and my friend <a href="https://github.com/EpicGamer007" data-content="Abhay" target="_blank" class="intext-link">Abhay</a> were able to recreate the entire game of chess inside the console using Java.</p>
@@ -156,8 +172,8 @@
                 <p class="transition2">A silly 3D parkour game where you run away from Elmo. Made with three.js. My friend <a href="https://github.com/EpicGamer007" data-content="Abhay" target="_blank" class="intext-link">Abhay</a> helped design a leaderboard.</p>
                 <a class="transition2" href="https://obby.epicgamer007.repl.co/" target="_blank">Link</a>
                 <div class="github transition2">
-                    <a class="transition2" href="https://github.com/daksh-g/Obby" target="_blank">Github</a>
-                    <img class="transition2" src="images/github.svg" alt="github icon">
+                    <a href="https://github.com/daksh-g/Obby" target="_blank">Github</a>
+                    <img src="images/github.svg" alt="github icon">
                 </div>
             </div>
             <div class="rect-and-circle transition3">
@@ -201,7 +217,7 @@
                 <img class="transition3" src="images/maze-game-2.png" alt="image2 of maze game">
             </div>
         </div>
-        <div class="project right">
+        <div class="project right mandelbrot">
             <div class="content">
                 <h2 class="transition2">Times Table Mandelbrot Set</h2>
                 <p class="transition2">A simulation that makes intricate shapes using the simple idea of times tables. <br> Hold the up arrow key to drive the simulation.</p>
@@ -218,6 +234,22 @@
             <img class="transition3" src="images/ttms-1.png" alt="image1 of ttms">
             <img class="transition3" src="images/ttms-2.png" alt="image2 of ttms">
             <img class="transition3" src="images/ttms-3.png" alt="image3 of ttms">
+        </div>
+        <div class="project left ai-gearbox">
+            <div class="content">
+                <h2 class="transition2">AI Gearbox</h2>
+                <p class="transition2">In my first hackathon submission, I, <a href="https://devpost.com/raghavkrishnaranganathan" data-content="Raghav" target="_blank" class="intext-link">Raghav</a>, and <a href="https://github.com/EpicGamer007" data-content="Abhay" target="_blank" class="intext-link">Abhay</a> made a website that hosts AI tools to help students. This won the prize for "Best Use of AI in Education" in the MLH 2023 December Hackathon, which had almost 400 participants.</p>
+                <a class="transition2" href="https://devpost.com/software/ai-gearbox" target="_blank">Link</a>
+                <div class="github transition2">
+                    <a href="https://github.com/daksh-g/AI-Gearbox" target="_blank">Github</a>
+                    <img src="images/github.svg" alt="github icon">
+                </div>
+            </div>
+            <div class="rect-and-circle transition3">
+                <div class="rect"></div>
+                <div class="circle"></div>
+            </div>
+            <img class="transition3" src="images/ai-gearbox.png" alt="image of ai gearbox">
         </div>
     </section>
 

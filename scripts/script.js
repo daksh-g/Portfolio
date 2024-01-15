@@ -21,10 +21,23 @@ tl.from('.hero .rect', {
     duration: 1
 }, '-=1.5');
 
-gsap.from('.transition1', {
+for(let section of ['about', 'skills']) {
+    gsap.from(`section.${section} .transition1`, {
+        scrollTrigger: {
+            trigger: `section.${section}`,
+            start: 'center bottom'
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.3
+    });
+}
+
+gsap.from('section.projects .transition1', {
     scrollTrigger: {
-        trigger: '.transition1',
-        start: 'top bottom'
+        trigger: 'section.projects .transition1',
+        start: 'center bottom'
     },
     y: 50,
     opacity: 0,
@@ -32,34 +45,32 @@ gsap.from('.transition1', {
     stagger: 0.3
 });
 
-let numProjects = 6;
+let numProjects = document.querySelectorAll('.project').length;
 
-// left-facing projects
-
-for(let i = 1; i <= 6; i++) {
+for(let i = 1; i <= numProjects; i++) {
 
     let tran2x = (i % 2 == 1 ? -50 : 50),
         tran3x = (i % 2 == 1 ? 50 : -50);
 
     gsap.from(`.project:nth-of-type(${i}) .transition2`, {
         scrollTrigger: {
-            trigger: `.project:nth-of-type(${i}) .transition2`,
-            start: 'top bottom',
+            trigger: `.project:nth-of-type(${i})`,
+            start: 'center bottom',
         },
         x: tran2x,
         opacity: 0,
-        duration: 1.2,
+        duration: 1,
         stagger: 0.3        
     });
 
     gsap.from(`.project:nth-of-type(${i}) .transition3`, {
         scrollTrigger: {
-            trigger: `.project:nth-of-type(${i}) .transition3`,
-            start: 'top bottom',
+            trigger: `.project:nth-of-type(${i})`,
+            start: 'center bottom',
         },
         x: tran3x,
         opacity: 0,
-        duration: 1.2,
+        duration: 1,
         stagger: 0.3
     });
 }
