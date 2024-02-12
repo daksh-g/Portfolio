@@ -31,7 +31,7 @@ img {
     width: 100%;
 }
 
-p, .project .content a {
+p, .project .content a, .footer-text a {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #5100B9;
 }
@@ -76,6 +76,23 @@ nav ul a:hover::before, footer ul a:hover::before {
 .footer-text {
     text-align: center;
     margin-bottom: 1em;
+}
+
+.footer-text a {
+    text-decoration: underline;
+}
+
+.footer-text a::before {
+    text-decoration: underline;
+    position: absolute;
+    content: attr(data-content);
+    color: #00F0FF;
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0% 100%);
+    transition: clip-path 0.5s ease;
+}
+
+.footer-text a:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* hero section */
@@ -200,7 +217,7 @@ img[src='images/github.svg'] {
     width: 2.5em;
 }
 
-@media all and (min-width: 750px) {
+@media all and (min-width: 900px) {
 
     /* everything */
 
@@ -335,7 +352,7 @@ img[src='images/github.svg'] {
         position: relative;
         display: grid;
         grid-template-columns: 55% 45%;
-        margin-top: 17.5em;
+        margin-bottom: 25vw;
         z-index: 5;
     }
 
@@ -368,11 +385,40 @@ img[src='images/github.svg'] {
         order: -1;
     }
 
-    .project.chess {
-        margin-top: 0em;
+    .project.project:first-of-type .rect-and-circle {
+        top: 0em;
+    }
+
+    .project:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .project.ai-gearbox {
+        margin-bottom: 30vw;
+    }
+
+    .project.maze, .project.mandelbrot {
+        margin-bottom: 12vw;
+    }
+
+    .project.asteroids {
+        margin-bottom: 20vw;
+    }
+
+    .project.ai-gearbox .content {
+        width: 60vw;
+        z-index: 2;
+        margin-top: 0;
+    }
+
+    .project.ai-gearbox > img {
+        position: relative;
+        top: 60%;
     }
     
     .project.chess .content {
+        position: relative;
+        right: calc(60vw - 100% + 6rem);
         width: 60vw;
         z-index: 2;
         margin-top: 0;
@@ -423,10 +469,6 @@ img[src='images/github.svg'] {
         bottom: 10em;
     }
 
-    .project.ai-gearbox {
-        margin-top: 10em;
-    }
-
     .rect-and-circle {
         width: 24vw;
         height: 56vw;
@@ -442,10 +484,6 @@ img[src='images/github.svg'] {
     .project.left .rect-and-circle {
         right: -2em;
         top: -5em;
-    }
-
-    .project:first-of-type .rect-and-circle {
-        top: 0em;
     }
 
     .project.right .rect-and-circle {
@@ -491,24 +529,24 @@ img[src='images/github.svg'] {
 @media all and (min-width: 1200px) {
 
 
-    .project:nth-of-type(2) {
+    /* .project:nth-of-type(2) {
         margin-top: 30em;
-    }
+    } */
 
 }
 
 @media all and (min-width: 1500px) {
 
-    .project:nth-of-type(2) {
+    /* .project:nth-of-type(2) {
         margin-top: 40em;
-    }
+    } */
 
-    .project:nth-of-type(4) {
+    /* .project:nth-of-type(4) {
         margin-top: 25em;
     }
 
     .project:last-of-type {
         margin-bottom: 5vw;
-    }
+    } */
 
 }
