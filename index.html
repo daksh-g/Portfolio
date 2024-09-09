@@ -45,7 +45,7 @@
         <div class="left transition1">
             <h1>About Me</h1>
             <p>
-                I’m Daksh, a passionate student developer from Bellevue, Washington. I’m currently a junior at Interlake High School. <br><br>
+                I’m Daksh, a passionate student developer from Bellevue, Washington. I’m currently a senior at Interlake High School. <br><br>
                 In the realm of coding, I have mostly spent my time in competitive programming, generally on competing in USACO, Codeforces, Leetcode, and others of the like. <br><br>
                 I built this website in 2022 to get back into coding projects and games, and to showcase what I had already made. <br><br>
                 Outside of programming, I spend my time biking and playing tennis. I have a particular love for math, and do math competitions as well.<br><br>
@@ -133,7 +133,21 @@
 
     <section class="projects" id="projects">
         <h1 id="projects" class="transition1">My Projects</h1>
-        <div class="project left ai-gearbox">
+
+        <div class="project left pnyx">
+            <div class="content">
+                <h2 class="transition2">Pnyx</h2>
+                <p class="transition2">Since the summer of 2024, I have been working on the website and beta app for Pnyx, an AI-powered news platform aggregating top sources from the web</p>
+                <a class="transition2" href="http://pnyx.news" target="_blank">Link</a>
+            </div>
+            <div class="rect-and-circle transition3">
+                <div class="rect"></div>
+                <div class="circle"></div>
+            </div>
+            <img src="images/pnyx.png" alt="image of frontpage of Pnyx" class="transition3">
+        </div>
+
+        <div class="project right ai-gearbox">
             <div class="content">
                 <h2 class="transition2">AI Gearbox</h2>
                 <p class="transition2">In my first hackathon submission, I, <a href="https://github.com/RaghavKR17" data-content="Raghav" target="_blank" class="intext-link">Raghav</a>, and <a href="https://github.com/EpicGamer007" data-content="Abhay" target="_blank" class="intext-link">Abhay</a> made a website that hosts AI tools to help students. This won the prize for "Best Use of AI in Education" in the MLH 2023 December Hackathon, which had almost 400 participants.</p>
@@ -149,7 +163,7 @@
             </div>
             <img class="transition3" src="images/ai-gearbox.png" alt="image of ai gearbox">
         </div>
-        <div class="project right chess">
+        <div class="project left chess">
             <div class="content">
                 <h2 class="transition2">Console Chess</h2>
                 <p class="transition2">In one of my first coding projects, I and my friend <a href="https://github.com/EpicGamer007" data-content="Abhay" target="_blank" class="intext-link">Abhay</a> were able to recreate the entire game of chess inside the console using Java.</p>
@@ -165,7 +179,7 @@
             </div>
             <img class="transition3" src="images/console-chess.png" alt="image of console chess">
         </div>
-        <div class="project left maze">
+        <div class="project right maze">
             <div class="content">
                 <h2 class="transition2">Maze Game</h2>
                 <p class="transition2">A simple 3D maze game I made with three.js. The mazes are randomly generated, and it replays your path once you finish the maze as well.</p>
@@ -183,6 +197,22 @@
                 <img class="transition3" src="images/maze-game-1.png" alt="image1 of maze game">
                 <img class="transition3" src="images/maze-game-2.png" alt="image2 of maze game">
             </div>
+        </div>
+        <div class="project left">
+            <div class="content">
+                <h2 class="transition2">Obby</h2>
+                <p class="transition2">A silly 3D parkour game where you run away from Elmo. Made with three.js. My friend <a href="https://github.com/EpicGamer007" data-content="Abhay" target="_blank" class="intext-link">Abhay</a> helped design a leaderboard.</p>
+                <a class="transition2" href="https://obby.epicgamer007.repl.co/" target="_blank">Link</a>
+                <div class="github transition2">
+                    <a href="https://github.com/daksh-g/Obby" target="_blank">Github</a>
+                    <img src="images/github.svg" alt="github icon">
+                </div>
+            </div>
+            <div class="rect-and-circle transition3">
+                <div class="rect"></div>
+                <div class="circle"></div>
+            </div>
+            <img class="transition3" src="images/obby.png" alt="image of obby game">
         </div>
         <div class="project right mandelbrot">
             <div class="content">
@@ -202,23 +232,7 @@
             <img class="transition3" src="images/ttms-2.png" alt="image2 of ttms">
             <img class="transition3" src="images/ttms-3.png" alt="image3 of ttms">
         </div>
-        <div class="project left">
-            <div class="content">
-                <h2 class="transition2">Obby</h2>
-                <p class="transition2">A silly 3D parkour game where you run away from Elmo. Made with three.js. My friend <a href="https://github.com/EpicGamer007" data-content="Abhay" target="_blank" class="intext-link">Abhay</a> helped design a leaderboard.</p>
-                <a class="transition2" href="https://obby.epicgamer007.repl.co/" target="_blank">Link</a>
-                <div class="github transition2">
-                    <a href="https://github.com/daksh-g/Obby" target="_blank">Github</a>
-                    <img src="images/github.svg" alt="github icon">
-                </div>
-            </div>
-            <div class="rect-and-circle transition3">
-                <div class="rect"></div>
-                <div class="circle"></div>
-            </div>
-            <img class="transition3" src="images/obby.png" alt="image of obby game">
-        </div>
-        <div class="project right asteroids">
+        <div class="project left asteroids">
             <div class="content">
                 <h2 class="transition2">Asteroids</h2>
                 <p class="transition2">A fun 2D-shooter game I made with p5.js.</p>
@@ -234,7 +248,7 @@
             </div>
             <img class="transition3" src="images/asteroids.png" alt="image of asteroids game">
         </div>
-        <div class="project left">
+        <div class="project right">
             <div class="content">
                 <h2 class="transition2">Snake</h2>
                 <p class="transition2">Just the classic game of snake. Made with p5.js.</p>

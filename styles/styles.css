@@ -385,16 +385,16 @@ img[src='images/github.svg'] {
         order: -1;
     }
 
+    .project:first-of-type {
+        margin-bottom: 30vw;
+    }
+
     .project.project:first-of-type .rect-and-circle {
         top: 0em;
     }
 
     .project:last-of-type {
         margin-bottom: 0;
-    }
-
-    .project.ai-gearbox {
-        margin-bottom: 30vw;
     }
 
     .project.maze, .project.mandelbrot {
@@ -406,19 +406,20 @@ img[src='images/github.svg'] {
     }
 
     .project.ai-gearbox .content {
-        width: 60vw;
+        /* For left-oriented */
+        /* width: 60vw;
         z-index: 2;
-        margin-top: 0;
+        margin-top: 0; */
     }
 
-    .project.ai-gearbox > img {
+    .project.pnyx > img, .project.ai-gearbox > img {
         position: relative;
-        top: 60%;
+        top: 30%;
     }
     
     .project.chess .content {
         position: relative;
-        right: calc(60vw - 100% + 6rem);
+        /* right: calc(60vw - 100% + 6rem); */
         width: 60vw;
         z-index: 2;
         margin-top: 0;
@@ -427,6 +428,11 @@ img[src='images/github.svg'] {
     .project.chess > img {
         position: relative;
         top: 65%;
+    }
+
+    .project.maze .content {
+        /* for left-oriented */
+        order: 1;
     }
 
     .project.mandelbrot {
