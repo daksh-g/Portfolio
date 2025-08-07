@@ -420,6 +420,10 @@ img[src='images/github.svg'] {
         margin-bottom: 0;
     }
 
+    .project.asl {
+        margin-top: 38vw;
+    }
+
     .project.maze, .project.mandelbrot {
         margin-bottom: 12vw;
     }
