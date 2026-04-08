@@ -1,0 +1,8 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "build:dev": "mkdir -p dist && cp -r index.html styles scripts images dist/",
+    "dev": "node server.js"
+  }
+}
