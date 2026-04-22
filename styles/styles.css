@@ -718,6 +718,10 @@ img[src='images/github.svg']:not(.github-btn img) {
         position: relative;
         top: 100px;
     }
+
+    .project.loopa  {
+        margin-top: 35vw;
+    }
     
     .project.chess > .content {
         position: relative;
